@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./script.js"></script>
+    <title>Housewise</title>
+  </head>
+  <body>
+
+    <!-- Header -->
+    <nav
+      class="hidden px-20 bg-gradient-to-r from-[#16aace] to-[#40b28d] lg:flex justify-between items-center"
+    >
+      <div class="flex space-x-7 py-6">
+        <img
+          src="./assets/linkedin-icon.png"
+          alt="linkedin"
+          class="h-6 cursor-pointer"
+        />
+        <img src="./assets/fb-icon.png" alt="fb" class="h-6 cursor-pointer" />
+      </div>
+      <div class="flex space-x-9">
+        <div class="flex items-center space-x-5 cursor-pointer">
+          <img src="./assets/footer-mail-icon.png" alt="mail" />
+          <p class="text-white">sales@housewise.in</p>
+        </div>
+        <div class="flex items-center space-x-5 cursor-pointer">
+          <img src="./assets/footer-phone-icon.png" alt="phone" />
+          <p class="text-white">+91-8448440693</p>
+        </div>
+      </div>
+    </nav>
+
+    <!-- sidebar -->
+    <div class="lg:hidden fixed right-0 top-0 w-96 h-[100vh] bg-[#16aace] text-white px-7 py-7 transition-all translate-x-96" id="sidebar">
+      <button class="text-5xl bg-[#16aace] text-white -mx-16 py-10 rounded-s-md" onclick="showsidebar()">&#8678;</button>
+      <ul class="block list-none lg:hidden space-y-11">
+        <li class="font-semibold text-xl">Home</li>
+        <li class="font-semibold text-xl">Services</li>
+        <li class="font-semibold text-xl">About us</li>
+        <li class="font-semibold text-xl">Contact us</li>
+        <li class="font-semibold text-xl">Login/Register</li>
+        <button class="button bg-white text-[#16aace]">Submit Property</button>
+      </ul>
+    </div>
+
+    <!-- Navbar -->
+    <div class="px-10 xl:px-20 flex justify-between items-center pt-11">
+      <img
+        src="./assets/logo.png"
+        alt="logo"
+        class="cursor-pointer lg:w-56 w-32"
+      />
+      <ul class="hidden list-none lg:flex space-x-3 xl:space-x-6">
+        <li class="nav-item">Home</li>
+        <li class="nav-item">Services</li>
+        <li class="nav-item">About us</li>
+        <li class="nav-item">Contact us</li>
+      </ul>
+      <div class="hidden lg:flex items-center space-x-3">
+        <img src="./assets/nav-login-icon.png" alt="login" />
+        <p class="nav-item">Login/Register</p>
+      </div>
+      <button class="button hidden lg:block">Submit Property</button>
+    </div>
+
+    <!-- Banner -->
+    <div class="flex px-20 items-center py-20 justify-between">
+      <div class="md:w-[50%] w-[100%]">
+        <h1 class="text-2xl lg:text-5xl leading-relaxed font-extrabold capitalize">
+          Property Management for NRI's in India
+        </h1>
+        <p class="pb-6 font-semibold lg:text-xl text-sm">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s.
+        </p>
+        <button class="button">Explore Services</button>
+        <p
+          class="text-[#16aace] underline font-semibold text-xl pt-7 cursor-pointer"
+        >
+          Click here if you are a Tenant
+        </p>
+      </div>
+      <img src="./assets/banner-img.png" alt="banner" class="hidden md:block w-[40%]" />
+    </div>
+
+    <!-- Cities -->
+    <div class="grid grid-cols-4 md:flex px-20 bg-[#e5f5fa] py-3 justify-around items-center">
+      <div class="flex flex-col items-center">
+        <img src="./assets/pune.png" alt="pune" />
+        <p class="cities">Pune</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="./assets/bangalore.png" alt="bangalore" />
+        <p class="cities">
+          Bangalore
+        </p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="./assets/hyderabad.png" alt="hyderabad" />
+        <p class="cities">
+          Hyderabad
+        </p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="./assets/gurugram.png" alt="gurugram" />
+        <p class="cities">
+          Gurugram
+        </p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="./assets/noida.png" alt="noida" />
+        <p class="cities">
+          Noida
+        </p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="./assets/chennai.png" alt="chennai" />
+        <p class="cities">
+          Chennai
+        </p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="./assets/delhi.png" alt="delhi" />
+        <p class="cities">
+          Delhi
+        </p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="./assets/mumbai.png" alt="mumbai" />
+        <p class="cities">
+          Mumbai
+        </p>
+      </div>
+    </div>
+
+    <!-- What We Do -->
+    <div class="mt-32 relative">
+      <h1 class="text-center text-5xl leading-relaxed font-extrabold mb-24">
+        What we Do
+      </h1>
+      <img
+        src="./assets/element-7.png"
+        alt="element"
+        class="absolute left-0 top-0"
+      />
+      <div class="grid grid-cols-2 md:grid-cols-4 px-20">
+        <div
+          class="flex flex-col items-center rounded py-10 px-4 hover:bg-[#edf8fb] hover:shadow-lg"
+        >
+          <img src="./assets/icon-1.png" alt="icon" class="h-16" />
+          <h1 class="capitalize font-semibold text-base lg:text-xl py-8">
+            End to end Services
+          </h1>
+          <p class="text-center text-sm lg:text-lg font-semibold text-gray-600 pb-5">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+          <button class="text-lg font-semibold">Read More &rarr;</button>
+        </div>
+        <div
+          class="flex flex-col items-center rounded py-10 px-4 hover:bg-[#edf8fb] hover:shadow-lg"
+        >
+          <img src="./assets/icon-2.png" alt="icon" class="h-16" />
+          <h1 class="capitalize font-semibold text-base lg:text-xl py-8">
+            Rental Management
+          </h1>
+          <p class="text-center text-sm lg:text-lg font-semibold text-gray-600 pb-5">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+          <button class="text-lg font-semibold">Read More &rarr;</button>
+        </div>
+        <div
+          class="flex flex-col items-center rounded py-10 px-4 hover:bg-[#edf8fb] hover:shadow-lg"
+        >
+          <img src="./assets/icon-3.png" alt="icon" class="h-16" />
+          <h1 class="capitalize font-semibold text-base lg:text-xl py-8">
+            Property Management
+          </h1>
+          <p class="text-center text-sm lg:text-lg font-semibold text-gray-600 pb-5">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+          <button class="text-lg font-semibold">Read More &rarr;</button>
+        </div>
+        <div
+          class="flex flex-col items-center rounded py-10 px-4 hover:bg-[#edf8fb] hover:shadow-lg"
+        >
+          <img src="./assets/icon-4.png" alt="icon" class="h-16" />
+          <h1 class="capitalize font-semibold text-base lg:text-xl py-8">
+            Online rent agreement
+          </h1>
+          <p class="text-center text-sm lg:text-lg font-semibold text-gray-600 pb-5">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+          <button class="text-lg font-semibold">Read More &rarr;</button>
+        </div>
+      </div>
+      <div class="mt-16 flex justify-center">
+        <button class="button">Explore More</button>
+      </div>
+    </div>
+
+    <!-- About Us -->
+    <div class="relative flex justify-between items-center py-28 px-20">
+      <img
+        src="./assets/element-3.png"
+        alt="icon"
+        class="absolute right-0 top-0"
+      />
+      <img src="./assets/about-us-img.png" alt="contact-us" class="w-[45%]" />
+      <div class="w-[50%]">
+        <h1 class="text-2xl lg:text-5xl leading-relaxed font-extrabold">About Us</h1>
+        <p class="text-base lg:text-xl font-semibold text-gray-600 py-8">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.
+        </p>
+        <button class="button mt-5">Learn More</button>
+      </div>
+    </div>
+
+    <!-- Details -->
+    <div
+      class="bg-gradient-to-r from-[#16aace] to-[#40b28d] flex justify-around px-20 py-14"
+    >
+      <div class="text-white flex items-center flex-col">
+        <img
+          src="./assets/icon-properties.png"
+          alt="icon"
+          class="h-12 xl:h-20 w-auto"
+        />
+        <h1 class="details-header">710</h1>
+        <p class="capitalize text-lg xl:text-2xl font-semibold">Properties</p>
+      </div>
+      <div class="text-white flex items-center flex-col">
+        <img
+          src="./assets/icon-sqft.png"
+          alt="icon"
+          class="h-12 xl:h-20 w-auto"
+        />
+        <h1 class="details-header">852000</h1>
+        <p class="capitalize text-lg xl:text-2xl font-semibold">Square-feet</p>
+      </div>
+      <div class="text-white flex items-center flex-col">
+        <img
+          src="./assets/icon-clients.png"
+          alt="icon"
+          class="h-12 xl:h-20 w-auto"
+        />
+        <h1 class="details-header">3200</h1>
+        <p class="capitalize text-lg xl:text-2xl font-semibold">
+          Happy Clients
+        </p>
+      </div>
+      <div class="text-white flex items-center flex-col">
+        <img
+          src="./assets/icon-cities.png"
+          alt="icon"
+          class="h-12 xl:h-20 w-auto"
+        />
+        <h1 class="details-header">7</h1>
+        <p class="capitalize text-lg xl:text-2xl font-semibold">Cities</p>
+      </div>
+      <div class="text-white flex items-center flex-col">
+        <img
+          src="./assets/icon-countries.png"
+          alt="icon"
+          class="h-12 xl:h-20 w-auto"
+        />
+        <h1 class="details-header">21</h1>
+        <p class="capitalize text-lg xl:text-2xl font-semibold">Countries</p>
+      </div>
+    </div>
+
+    <!-- How it Works -->
+    <div class="mt-16 relative">
+      <div class="absolute top-0 right-0 flex space-x-28">
+        <img src="./assets/element-5.png" alt="icon" />
+        <img src="./assets/element-6.png" alt="icon" />
+      </div>
+      <h1
+        class="capitalize text-5xl leading-relaxed font-extrabold text-center pb-16"
+      >
+        How it Works
+      </h1>
+      <div class="grid grid-cols-1 md:grid-cols-3">
+        <div class="card">
+          <img src="./assets/icon-step-1.png" alt="icon" />
+          <h1 class="text-3xl leading-relaxed font-semibold">Step 1</h1>
+          <p class="text-center text-lg leading-8 font-medium text-gray-600">
+            House owner contacts HouseWise representative and authorizes him/her
+            to rent out the property(flat/bunglow) on the house owner's behalf
+          </p>
+        </div>
+        <div class="card">
+          <img src="./assets/icon-step-2.png" alt="icon" />
+          <h1 class="text-3xl leading-relaxed font-semibold">Step 2</h1>
+          <p class="text-center text-lg leading-8 font-medium text-gray-600">
+            House owner hands over keys and relevant property documents to the
+            HouseWise representative
+          </p>
+        </div>
+        <div class="card">
+          <img src="./assets/icon-step-3.png" alt="icon" />
+          <h1 class="text-3xl leading-relaxed font-semibold">Step 3</h1>
+          <p class="text-center text-lg leading-8 font-medium text-gray-600">
+            HouseWise hunts for tenants, the ones working with marquee companies
+            and looking out for a house on rent.
+          </p>
+        </div>
+        <div class="card">
+          <img src="./assets/icon-step-4.png" alt="icon" />
+          <h1 class="text-3xl leading-relaxed font-semibold">Step 4</h1>
+          <p class="text-center text-lg leading-8 font-medium text-gray-600">
+            On finalizing the tenant, HouseWise does the following:
+            <br />
+            a) Police verification of the prospective tenant<br />
+            b) Ask for proof of employment (HR letter) from the prospective
+            tenant
+          </p>
+        </div>
+        <div class="card">
+          <img src="./assets/icon-step-5.png" alt="icon" />
+          <h1 class="text-3xl leading-relaxed font-semibold">Step 5</h1>
+          <p class="text-center text-lg leading-8 font-medium text-gray-600">
+            After successful verification of the prospective tenant, HouseWise
+            prepare the contract to be signed by both parties - house owner and
+            the tenant. House owner can pre- authorize HouseWise representative
+            to sign on the owner's behalf.
+          </p>
+        </div>
+        <div class="card">
+          <img src="./assets/icon-step-6.png" alt="icon" />
+          <h1 class="text-3xl leading-relaxed font-semibold">Step 6</h1>
+          <p class="text-center text-lg leading-8 font-medium text-gray-600">
+            a) Tenant transfers monthly rent to house owner's account.
+            <br />
+            b) HouseWise continues to maintain property till end of the lease.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Benefits -->
+    <div class="mt-16 relative">
+      <img
+        src="./assets/element-4.png"
+        alt="icon"
+        class="absolute left-0 top-0"
+      />
+      <h1
+        class="capitalize text-5xl leading-relaxed font-extrabold text-center pb-16"
+      >
+        Benefits
+      </h1>
+      <div class="grid grid-cols-1 md:grid-cols-3 px-20 space-x-10 pb-32">
+        <div class="flex flex-col items-center">
+          <img src="./assets/benefits-3.png" alt="icon" class="h-28" />
+          <h1 class="text-3xl leading-relaxed font-semibold pt-4 pb-8">
+            Lower Risk profile
+          </h1>
+          <p class="text-center text-lg leading-8 font-medium text-gray-600">
+            House owner contacts HouseWise representative and authorizes himher
+            to rent out the property(fiat/bunglow) on the house owner's behalf
+          </p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="./assets/benefits-1.png" alt="icon" class="h-28" />
+          <h1 class="text-3xl leading-relaxed font-semibold pt-4 pb-8">
+            Superior Financing
+          </h1>
+          <p class="text-center text-lg leading-8 font-medium text-gray-600">
+            House owner hands over keys and relevant property documents to the
+            HouseWise representative
+          </p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="./assets/benefits-2.png" alt="icon" class="h-28" />
+          <h1 class="text-3xl leading-relaxed font-semibold pt-4 pb-8">
+            Tax benefits
+          </h1>
+          <p class="text-center text-lg leading-8 font-medium text-gray-600">
+            HouseWise hunts for tenants, the ones working with marquee companies
+            and looking out for a house on rent.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Founder and Advisory Board -->
+    <div class="bg-gradient-to-b from-[#16aace] to-[#40b28d]">
+      <!-- founder -->
+      <div
+        class="mx-20 block md:flex items-center py-16 justify-between border-b-2 border-gray-600 relative"
+      >
+        <img
+          src="./assets/element-3.png"
+          alt="icon"
+          class="absolute -right-20 top-32"
+        />
+        <div class="hidden md:flex flex-col items-center space-y-16">
+          <img
+            src="./assets/linkedin-icon.png"
+            alt="linkedin"
+            class="cursor-pointer"
+          />
+          <img
+            src="./assets/twitter-icon.png"
+            alt="twitter-icon"
+            class="cursor-pointer"
+          />
+          <img
+            src="./assets/insta-icon.png"
+            alt="instagram"
+            class="cursor-pointer"
+          />
+          <img src="./assets/fb-icon.png" alt="fb" class="cursor-pointer" />
+        </div>
+        <img
+          src="./assets/founder-image.png"
+          alt="founder"
+          class="w-56 xl:w-full"
+        />
+        <div class="text-white md:w-[55%]">
+          <h1 class="text-2xl lg:text-5xl leading-relaxed font-bold">Pryank Agrawal</h1>
+          <h2 class="text-lg lg:text-3xl font-semibold py-6">Founder & CEO</h2>
+          <h3 class="uppercase text-base lg:text-2xl font-medium pb-7">IIT Roorkee</h3>
+          <p class="text-sm lg:text-xl lg:leading-10">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </p>
+        </div>
+      </div>
+      <!-- Advisory Board -->
+      <div class="mt-20 text-white px-20 relative">
+        <img
+          src="./assets/element-2.png"
+          alt="icon"
+          class="absolute left-0 top-0"
+        />
+        <h1 class="text-center text-5xl font-extrabold">Advisory Board</h1>
+        <div class="grid grid-cols-1 lg:grid-cols-3 py-36">
+          <div
+            class="bg-[url('./assets/advisor-1.jpg')] bg-center bg-cover w-[95%]"
+          >
+            <div class="h-full bg-black bg-opacity-70 py-10 xl:py-14 px-6">
+              <h1 class="text-xl xl:text-5xl font-bold">Ruchir Arora</h1>
+              <h2
+                class="uppercase text-lg xl:text-2xl font-medium text-[#16a3c5] py-4"
+              >
+                isb hyderabad
+              </h2>
+              <p class="text-base xl:text-xl md:leading-10">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book.
+              </p>
+            </div>
+          </div>
+          <img
+            src="./assets/advisor-2.jpg"
+            alt="advisor-2"
+            class="h-[100%] object-cover object-center w-[95%]"
+          />
+          <div class="w-[95%] bg-[#262626]"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review -->
+    <div class="bg-[#edf8fb] py-24 flex flex-col items-center">
+      <div class="flex items-center space-x-8">
+        <img src="./assets/star-icon.png" alt="star" />
+        <img src="./assets/star-icon.png" alt="star" />
+        <img src="./assets/star-icon.png" alt="star" />
+        <img src="./assets/star-icon.png" alt="star" />
+        <img src="./assets/star-icon.png" alt="star" />
+      </div>
+      <p class="text-center text-xl leading-10 w-2/3 py-6">
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book.
+      </p>
+      <h1 class="capitalize text-3xl font-bold">james kundsen</h1>
+      <p class="capitalize text-xl py-6">Product manager</p>
+      <div class="flex items-center space-x-6">
+        <img src="./assets/testimonial-1.png" alt="testimonial" />
+        <img src="./assets/testimonial-2.png" alt="testimonial" />
+        <img src="./assets/testimonial-3.png" alt="testimonial" />
+      </div>
+    </div>
+
+    <!-- In the news -->
+    <div class="my-24 relative px-6 md:px-20">
+      <img
+        src="./assets/element-1.png"
+        alt="icon"
+        class="absolute left-0 top-0"
+      />
+      <h2 class="text-center text-5xl font-extrabold">In the News</h2>
+      <div class="grid grid-cols-2 gap-8 md:flex items-center justify-around py-24">
+        <img src="./assets/client-1.png" alt="google" class="w-24 xl:w-full" />
+        <img src="./assets/client-2.png" alt="google" class="w-24 xl:w-full" />
+        <img src="./assets/client-3.png" alt="google" class="w-24 xl:w-full" />
+        <img src="./assets/client-4.png" alt="google" class="w-24 xl:w-full" />
+        <img src="./assets/client-5.png" alt="google" class="w-24 xl:w-full" />
+      </div>
+
+      <div class="grid space-y-6 grid-cols-1 lg:grid-cols-3 space-x-8">
+        <div>
+          <img src="./assets/post-1.png" alt="post" class="h-72" />
+          <h1 class="text-3xl font-semibold py-6">
+            Ways to Reduce Interest Rates
+          </h1>
+          <p class="text-xl leading-10">
+            How can you be bored when you have so many things to do & a lot to
+            catch up with which you would otherwise miss because of your hectic
+            routine?...<span
+              class="uppercase text-[#16aace] font-semibold cursor-pointer"
+              >read more</span
+            >
+          </p>
+        </div>
+        <div>
+          <img src="./assets/post-2.png" alt="post" class="h-72" />
+          <h1 class="text-3xl font-semibold py-6">
+            Ways to Reduce Interest Rates
+          </h1>
+          <p class="text-xl leading-10">
+            How can you be bored when you have so many things to do & a lot to
+            catch up with which you would otherwise miss because of your hectic
+            routine?...<span
+              class="uppercase text-[#16aace] font-semibold cursor-pointer"
+              >read more</span
+            >
+          </p>
+        </div>
+        <div>
+          <img src="./assets/post-3.png" alt="post" class="h-72" />
+          <h1 class="text-3xl font-semibold py-6">
+            Ways to Reduce Interest Rates
+          </h1>
+          <p class="text-xl leading-10">
+            How can you be bored when you have so many things to do & a lot to
+            catch up with which you would otherwise miss because of your hectic
+            routine?...<span
+              class="uppercase text-[#16aace] font-semibold cursor-pointer"
+              >read more</span
+            >
+          </p>
+        </div>
+      </div>
+      <div class="flex justify-center mt-14">
+        <button class="button">View All</button>
+      </div>
+      <img
+        src="./assets/element-9.png"
+        alt="icon"
+        class="absolute right-0 bottom-0"
+      />
+    </div>
+
+    <!-- Address -->
+    <div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-5 lg:flex justify-around md:px-20 mb-20">
+        <button class="location">mumbai</button>
+        <button class="location">pune</button>
+        <button class="location">bangalore</button>
+        <button class="location">delhi</button>
+        <button class="location">gurugram</button>
+        <button class="location">noida</button>
+        <button class="location">chennai</button>
+        <button class="location">hyderabad</button>
+      </div>
+      <div
+        class="bg-[url('./assets/map-img.png')] bg-cover bg-center flex justify-center items-center py-56"
+      >
+        <div class="bg-white p-5 cursor-pointer">
+          <h2 class="text-[#16aace] text-xl font-semibold pb-2">Mumbai</h2>
+          <p class="font-medium text-lg pb-4">
+            Vishala Complex, 1st Floor,<br />
+            Sector 7, HSR Layout,<br />
+            Bangalore, 560102.
+          </p>
+          <div class="flex items-center space-x-3">
+            <img src="./assets/contact-phone-icon.png" alt="" class="w-7" />
+            <p class="font-medium text-lg">0123456789</p>
+          </div>
+          <div class="flex items-center space-x-3">
+            <img src="./assets/contact-email-icon.png" alt="" class="w-7" />
+            <p class="font-medium text-lg">Email</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="mt-36 relative pb-24">
+      <h2 class="text-center text-5xl font-extrabold">Contact</h2>
+      <img
+        src="./assets/element-4.png"
+        alt="icon"
+        class="absolute top-0 left-0"
+      />
+      <div class="absolute top-0 right-0 flex flex-col items-end space-y-8 -z-10">
+        <img src="./assets/element-9.png" alt="" />
+        <img src="./assets/contact-img-2.png" alt="" class="w-32 xl:w-full" />
+      </div>
+      <div class="block space-y-9 lg:flex justify-between items-center px-20 pt-16">
+        <div class="space-y-4 lg:w-[45%] w-[100%]">
+          <input type="text" placeholder="Name" class="input" />
+          <input type="text" placeholder="Email" class="input" />
+          <input type="text" placeholder="Phone" class="input" />
+          <textarea
+            type="text"
+            placeholder="Message"
+            class="input resize-none h-80"
+          ></textarea>
+          <div class="flex justify-center">
+            <button class="button">Submit</button>
+          </div>
+        </div>
+        <div class="w-[100%] lg:w-1/2 space-y-9 lg:space-y-24">
+          <div class="flex space-x-4 md:space-x-14 cursor-pointer items-center">
+            <img src="./assets/contact-phone-icon.png" alt="" class="h-12" />
+            <div class="font-semibold text-sm md:text-xl">
+              +91 98867 69886 <br />
+              +91 81478 24460
+            </div>
+          </div>
+          <div class="flex space-x-4 md:space-x-14 cursor-pointer items-center">
+            <img src="./assets/contact-email-icon.png" alt="" class="h-12" />
+            <div class="font-semibold text-sm md:text-xl">sales@housewise.com</div>
+          </div>
+          <div class="flex space-x-4 md:space-x-14 cursor-pointer">
+            <img src="./assets/contact-location-icon.png" alt="" class="h-12" />
+            <div class="font-semibold text-sm md:text-xl">
+              #51/2, 13th Cross, JP Nagar, <br />
+              1st Phase, Anjaneya <br />
+              Temple Street, Sarakki Gate, <br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/contact-img.png"
+        alt=""
+        class="hidden lg:block absolute right-32 bottom-0 -z-10"
+      />
+    </div>
+
+    <!-- footer -->
+    <div class="bg-[#262626] p-16 grid grid-cols-1 md:grid-cols-2 gap-9 lg:flex justify-between text-white">
+      <div>
+        <img
+          src="./assets/logo.png"
+          alt="logo"
+          class="xl:h-10 cursor-pointer h-6"
+        />
+        <div class="flex items-center space-x-7 py-8">
+          <img
+            src="./assets/linkedin-icon.png"
+            alt="linkedin"
+            class="cursor-pointer h-6"
+          />
+          <img
+            src="./assets/insta-icon.png"
+            alt="instagram"
+            class="cursor-pointer h-6"
+          />
+          <img
+            src="./assets/twitter-icon.png"
+            alt="twitter"
+            class="cursor-pointer h-6"
+          />
+          <img src="./assets/fb-icon.png" alt="fb" class="cursor-pointer h-6" />
+        </div>
+        <h2 class="text-lg font-medium">Contact</h2>
+        <div class="flex space-x-5 cursor-pointer items-center py-4">
+          <img src="./assets/footer-mail-icon.png" alt="" />
+          <div class="text-md">sales@housewise.com</div>
+        </div>
+        <div class="flex space-x-5 cursor-pointer items-center">
+          <img src="./assets/footer-phone-icon.png" alt="" />
+          <div class="text-md">+91 98867 69886</div>
+        </div>
+        <h2 class="text-lg font-medium mt-6 mb-4">Office Address</h2>
+        <div class="text-md cursor-pointer">
+          #51/2, 13th Cross, JP Nagar, <br />
+          1st Phase, Anjaneya <br />
+          Temple Street, Sarakki Gate, <br />
+        </div>
+      </div>
+      <div>
+        <h1 class="text-xl font-semibold pb-7">Services</h1>
+        <ul class="list-none text-base xl:text-xl space-y-5">
+          <li class="cursor-pointer">End to End Services</li>
+          <li class="cursor-pointer">Rental Management</li>
+          <li class="cursor-pointer">Property Management</li>
+          <li class="cursor-pointer">Online Rent Agreement</li>
+        </ul>
+      </div>
+      <ul class="list-none text-base xl:text-xl space-y-5">
+        <li class="cursor-pointer">Home</li>
+        <li class="cursor-pointer">About Us</li>
+        <li class="cursor-pointer">Pay Rent</li>
+        <li class="cursor-pointer">Submit Property</li>
+        <li class="cursor-pointer">Careers</li>
+        <li class="cursor-pointer">Blogs</li>
+      </ul>
+      <ul class="list-none text-base xl:text-xl space-y-5">
+        <li class="cursor-pointer">Sitemap</li>
+        <li class="cursor-pointer">Contact Us</li>
+        <li class="cursor-pointer">Terms and Conditions</li>
+        <li class="cursor-pointer">Privacy Policy</li>
+      </ul>
+    </div>
+    <div class="bg-[#171717] flex justify-center text-white py-4">
+      Copyright 2015 - Housewise
+    </div>
+  </body>
+</html>
